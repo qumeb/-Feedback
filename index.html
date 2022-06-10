@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+     <div class="form">
+         <form action="send_mail.php" id="form" name="form" class="form__body" method="POST">
+            <h1 class="form__title">Отправка уведомления на почту</h1>
+            <div class="form__item">
+                <label for="formName" class="form__label">Имя*</label>
+                <input id="name" type="text" name="name" class="form__input" data-reg="^[А-ЯЁ][а-яё]*$"/>    
+            </div>
+            <div class="form__item">
+                <label for="formEmail" class="form__label">E-mail *</label>
+                <input id="email" type="text" name="email" class="form__input" data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$">    
+            </div>
+            <div class="form__item">
+                <label for="formMessage" class="form__label">Сообщение</label> 
+                <textarea name="message" id="message" class="form__input" required name ="message" ></textarea> 
+            </div>
+            <button type="submit" class="form__button" id="button" name="button">Отправить</button>
+         </form>
+</body>
+</html>
